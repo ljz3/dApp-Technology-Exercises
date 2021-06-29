@@ -1,0 +1,44 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+.header{
+    background-color: #ff8a8a;
+    vertical-align: text-top;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content{
+    flex: 2;
+    display: flex;
+}
+
+.left{
+    flex: 0 0;
+    background-color: #ffbffd;
+    padding: 5pt;
+}
+
+.middle{
+    background-color: #fffec7;
+    flex: 1 1;
+    padding: 5pt;
+
+}
+
+.right{
+    flex: 0 0 100pt;
+    background-color: #b0fffe;
+    padding: 5pt;
+
+}
+
+.footer{
+    background-color: #d6b0ff;
+}
