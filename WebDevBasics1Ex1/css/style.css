@@ -6,6 +6,7 @@ html, body{
 .header{
     background-color: #ff8a8a;
     vertical-align: text-top;
+    height: 70pt;
 }
 
 .container{
