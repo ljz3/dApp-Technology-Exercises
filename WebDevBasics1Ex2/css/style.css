@@ -1,0 +1,45 @@
+body{
+    height: 100%;
+    margin: 0;
+}
+
+.form{
+    background-color: #f0f0f0;
+    padding: 50pt;
+}
+
+.header{
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}
+
+.main{
+    font-size: 20pt;
+}
+
+.sub{
+    font-size: 15pt;
+    color: #8a8a8a;
+}
+
+.text{
+    width: 98%;
+    margin: 10px 0 10px 0;
+}
+
+.message{
+    min-height: 200px;
+}
+
+.container{
+    text-align: center;
+    height: 30px;
+    margin-top: 30px;
+}
+
+.submit{
+    background-color: #99ff94;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+}

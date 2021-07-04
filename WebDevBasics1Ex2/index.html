@@ -5,19 +5,29 @@
         <title>Web Dev Basics 1 Ex 1</title>
     </head>
     <body>
-        <div class="container">
-            <div class="header">
-                <h1>Header (70pt)</h1>
+        <form class="form">
+            <p class="header main">CONTACT US</p>
+            <p class="header sub">We are very responsive! Feel free to send us a message.</p>
+            <label>Name:</label>
+            <br>
+            <input class="text" placeholder="Alice Lee">
+            <br>
+            <label>Email:</label>
+            <br>
+            <input class="text" placeholder="alice-lee@gmail.com">
+            <br>
+            <label>Phone Number:</label>
+            <br>
+            <input class="text" placeholder="+1-647-998-6453">
+            <br>
+            <label>Message:</label>
+            <br>
+            <textarea class="text message" placeholder="I would like to check out the blinds!"></textarea>
+            <br>
+            <div class="container">
+                <button class="submit" type="submit">Send Message</button>
             </div>
-            <div class="content">
-                <div class="left">LSide <br> (auto)</div>
-                <div class="middle">Content (expands)</div>
-                <div class="right">RSide (100pt)</div>
-            </div>
-            <div class="footer">
-                <h2>Footer (auto)</h2>
-            </div>
-        </div>
+        </form>
     </body>
 
 </html>
