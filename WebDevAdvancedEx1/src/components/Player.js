@@ -14,11 +14,11 @@ export default class Player extends Component{
     }
 
     sendRed = () => {
-        this.props.parentCallback("#ff0831");
+        this.props.parentCallback("#ff545d");
     }
 
     sendBlue = () => {
-        this.props.parentCallback("#727aed");
+        this.props.parentCallback("#5c82ff");
     }
 
     sendGreen = () => {
@@ -32,8 +32,8 @@ export default class Player extends Component{
     render(){
 
         return(
-            <div class="container" style={{backgroundColor: this.props.color}}>
-                <h1 class="header">{this.props.name}</h1>
+            <div className="container" style={{backgroundColor: this.props.color}}>
+                <h1 className="header">{this.props.name}</h1>
                 <FormControl>
                     <InputLabel>Select Color</InputLabel>
                     <Select>

@@ -47,7 +47,7 @@ export default class App extends Component{
   render (){
     return(
       <div>
-        <h1 class="title">Game Lobby</h1>
+        <h1 className="title">Game Lobby</h1>
         <Grid container id="container" direction="row" justifyContent="center" alignItems="center">
           <Grid container item>
             <Player name="Player 1" parentCallback = {this.callbackFunctionOne} color={this.state.playerOne}></Player>
