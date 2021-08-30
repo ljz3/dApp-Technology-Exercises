@@ -1,0 +1,15 @@
+#container{
+  margin-left: auto;
+  margin-right: auto;
+  border: solid #000;
+  border-width: 1 1px;
+  min-width: 350px;
+  max-width: 710px;
+}
+
+
+.title{
+  margin-top: 75px;
+  margin-bottom: 20px;
+  text-align: center;
+}
