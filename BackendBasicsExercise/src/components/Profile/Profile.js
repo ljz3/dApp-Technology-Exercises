@@ -64,7 +64,6 @@ export default function Profile() {
   }, []);
 
   const getImg = async() => {
-    // console.log(db.collection("users").doc(currentUser.email).get().data())
     const userRef = db.collection("users").doc(currentUser.email);
     const doc = await userRef.get();
     if (!doc.exists) {

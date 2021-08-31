@@ -41,7 +41,8 @@ export default function Signup(){
         db.collection("users").doc(emailRef.current.value).set({
             username: usernameRef.current.value,
             color: "None",
-            picture: ""
+            picture: "",
+            inLobby: false
         })
     }
 
