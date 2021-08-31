@@ -7,7 +7,7 @@ import Profile from "./components/Profile/Profile";
 import Login from "./components/Login/Login";
 import Lobby from "./components/Lobby/Lobby";
 import PrivateRoute from "./PrivateRoute";
-import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
+import UpdateCredentials from "./components/UpdateCredentials/UpdateCredentials";
 import NavigationBar from "./components/Navbar/NavigationBar";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
           <NavigationBar/>
             <Switch>
               <PrivateRoute path="/profile" component={Profile} />
-              <PrivateRoute path="/update-profile" component={UpdateProfile} />
+              <PrivateRoute path="/update-credentials" component={UpdateCredentials} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login}/>
               <PrivateRoute path="/">
