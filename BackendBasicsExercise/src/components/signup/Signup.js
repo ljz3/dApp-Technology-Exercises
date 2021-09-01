@@ -40,7 +40,6 @@ export default function Signup(){
     function addUser(){
         db.collection("users").doc(emailRef.current.value).set({
             username: usernameRef.current.value,
-            color: "None",
             picture: "",
             inLobby: false
         })

@@ -1,10 +1,12 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useHistory } from "react";
 import './Lobby.css';
 import { Button } from "react-bootstrap";
 import Player from '../Player/Player';
 import Grid from '@material-ui/core/Grid';
 import { useAuth } from "../../contexts/AuthContext";
 import { db } from "../../firebase"
+
+
 
 /*
 export default class Lobby extends Component{
@@ -115,17 +117,18 @@ export default function Lobby(){
     const player = await getPlayerNumber();
 
     db.collection("lobby").doc(player).update({
-      username: "testing1",
-      color: "red",
+      username: curUsername,
+      color: "white",
       joined: true
     })
 
     db.collection("users").doc(currentUser.email).update({
       inLobby: player
     })
+    setInLobby(player);
   }
 
-  function leaveLobby(){
+  async function leaveLobby(){
     db.collection("users").doc(currentUser.email).update({
       inLobby: 0
     })
@@ -135,9 +138,9 @@ export default function Lobby(){
       color: "",
       joined: false
     })
-
-    console.log(username1);
+    setInLobby(0);
   }
+
 
   const userInLobby = async() => {
     const userRef = db.collection("users").doc(currentUser.email);
@@ -164,6 +167,7 @@ export default function Lobby(){
     if (!doc2.exists) {
       console.log('No such document!');
     } else {
+      setUsername2(doc2.data().username);
       setColor2(doc2.data().color);
     }
     const userRef3 = db.collection("lobby").doc("3");
@@ -171,6 +175,7 @@ export default function Lobby(){
     if (!doc3.exists) {
       console.log('No such document!');
     } else {
+      setUsername3(doc3.data().username);
       setColor3(doc3.data().color);
     }
     const userRef4 = db.collection("lobby").doc("4");
@@ -178,6 +183,7 @@ export default function Lobby(){
     if (!doc4.exists) {
       console.log('No such document!');
     } else {
+      setUsername4(doc4.data().username);
       setColor4(doc4.data().color);
     }
   }
