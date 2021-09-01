@@ -86,7 +86,7 @@ export default function Player(props){
 
     async function changeNone(){
         if(curUsername === curUserLobby){
-            const url ="http://localhost:5001/dapp-backend-basics/us-central1/changeColor" + "?user=" + props.player + "&color=" + "white";
+            const url ="https://us-central1-dapp-backend-basics.cloudfunctions.net/changeColor" + "?user=" + props.player + "&color=" + "white";
             axios.post(url);
         }
         await sleep(1000);
@@ -96,7 +96,7 @@ export default function Player(props){
     async function changeRed(){
         console.log(curUserLobby);
         if(curUsername === curUserLobby){
-            const url ="http://localhost:5001/dapp-backend-basics/us-central1/changeColor" + "?user=" + props.player + "&color=" + "red";
+            const url ="https://us-central1-dapp-backend-basics.cloudfunctions.net/changeColor" + "?user=" + props.player + "&color=" + "red";
             axios.post(url);
         }
         await sleep(1000);
@@ -105,7 +105,7 @@ export default function Player(props){
 
     async function changeBlue(){
         if(curUsername === curUserLobby){
-            const url ="http://localhost:5001/dapp-backend-basics/us-central1/changeColor" + "?user=" + props.player + "&color=" + "blue";
+            const url ="https://us-central1-dapp-backend-basics.cloudfunctions.net/changeColor" + "?user=" + props.player + "&color=" + "blue";
             axios.post(url);
         }
         await sleep(1000);
@@ -114,7 +114,7 @@ export default function Player(props){
 
     async function changeGreen(){
         if(curUsername === curUserLobby){
-            const url ="http://localhost:5001/dapp-backend-basics/us-central1/changeColor" + "?user=" + props.player + "&color=" + "green";
+            const url ="https://us-central1-dapp-backend-basics.cloudfunctions.net/changeColor" + "?user=" + props.player + "&color=" + "green";
             axios.post(url);
         }
         await sleep(1000);
@@ -123,7 +123,7 @@ export default function Player(props){
 
     async function changeYellow(){
         if(curUsername === curUserLobby){
-            const url ="http://localhost:5001/dapp-backend-basics/us-central1/changeColor" + "?user=" + props.player + "&color=" + "yellow";
+            const url ="https://us-central1-dapp-backend-basics.cloudfunctions.net/changeColor" + "?user=" + props.player + "&color=" + "yellow";
             axios.post(url);
         }
         await sleep(1000);
@@ -136,7 +136,7 @@ export default function Player(props){
 
     function getColorRequest(){
         if(curUsername === curUserLobby){
-            const url ="http://localhost:5001/dapp-backend-basics/us-central1/getColor?user=" + props.player;
+            const url ="https://us-central1-dapp-backend-basics.cloudfunctions.net/getColor?user=" + props.player;
             axios.get(url).then(function (response){
                 setCurColor(response.data);
             })
